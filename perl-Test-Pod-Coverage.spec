@@ -1,6 +1,6 @@
 Name:           perl-Test-Pod-Coverage
 Version:        1.08
-Release:        19%{?dist}
+Release:        20%{?dist}
 Summary:        Check for pod coverage in your distribution
 
 Group:          Development/Libraries
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.08-20
+- Mass rebuild 2013-12-27
+
 * Mon Feb 18 2013 Marcela Mašláňová <mmaslano@redhat.com> - 1.08-19
 - Add missing BR: EU::MM
 
