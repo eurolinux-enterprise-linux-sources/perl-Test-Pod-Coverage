@@ -1,6 +1,6 @@
 Name:           perl-Test-Pod-Coverage
 Version:        1.08
-Release:        20%{?dist}
+Release:        21%{?dist}
 Summary:        Check for pod coverage in your distribution
 
 Group:          Development/Libraries
@@ -16,6 +16,7 @@ BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(Pod::Coverage)
 BuildRequires:  perl(Test::Builder)
 BuildRequires:  perl(Test::Builder::Tester)
+BuildRequires:  perl(Pod::Coverage::CountParents)
 BuildRequires:  perl(Test::More)
 BuildRequires:  perl(Test::Pod)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -57,6 +58,13 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Wed Aug 12 2015 Scientific Linux Auto Patch Process <SCIENTIFIC-LINUX-DEVEL@LISTSERV.FNAL.GOV>
+- Eliminated rpmbuild "bogus date" error due to inconsistent weekday,
+  by assuming the date is correct and changing the weekday.
+
+* Mon May 04 2015 Petr Pisar <ppisar@redhat.com> - 1.08-21
+- Build-require Pod::Coverage::CountParents Perl module for tests (bug #1066046)
+
 * Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.08-20
 - Mass rebuild 2013-12-27
 
